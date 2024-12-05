@@ -1,0 +1,230 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* HEADER */
+.navegador{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0 10px;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+}
+.navegador h2{
+    font-size: 50px;
+}
+.menu a{
+    color: black;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+}
+.mostrar-menu{
+    order: 1;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: rgb(255, 1, 1);
+    text-decoration: none;
+}
+#check{
+    display: none;
+}
+.img-navidad{
+    display: flex;
+    position: absolute;
+    left: 265px;
+    top: 1px;
+    height: 40px;
+    z-index: 1;
+}
+.img-navidad:hover{
+    display: flex;
+    position: absolute;
+    left: 265px;
+    top: 1px;
+    height: 40px;
+    z-index: 1;
+}
+/*BANNER*/
+#banner{
+    color:aliceblue;
+    padding: 0 50px;
+    background-image: url(img/5469461.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: " ";
+    background-color: rgb(0, 0, 0,0.8);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+}
+.contenido-banner{
+    font-size: 80px;
+    font-weight: 100px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3 span{
+    font-weight: 100px;
+}
+.boton-empezar{
+    border-radius: 50px;
+    text-decoration: none;
+    color: aliceblue;
+    border: 1px solid red;
+    padding: 10px 40px;
+    align-self: baseline;
+    transition: 0.3s;
+    margin-top: 40px;
+}
+.boton-empezar:hover{
+    background-color: rgba(255, 1, 1,.5);
+}
+/*REDES*/
+#redes {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 50px;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+}
+
+.instagram a {
+    text-decoration: none;
+}
+.facebook a {
+    text-decoration: none;
+    color: black;
+}
+.tiktok a {
+    text-decoration: none;
+    color: black;
+}
+img{
+    height: 30px;
+}
+img:hover{
+    height: 35px;
+}
+
+/*RESPONSIVE*/
+@media(max-width:768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        top: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 100px 0;
+        z-index: 100;
+        transition: 0.3s;
+        right: -100%;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+
+    }
+    .navegador h2{
+        font-size: 45px;
+        padding-left:40px ;
+    }
+    .img-navidad{
+        display: flex;
+        position: absolute;
+        left: 280px;
+        top: 2px;
+        height: 32px;
+        z-index: 1;
+    }
+    .img-navidad:hover{
+        display: flex;
+        position: absolute;
+        left: 310px;
+        top: 0px;
+        height: 32px;
+        z-index: 1;
+    }
+
+    /* BANNER */
+    #banner{
+        color:aliceblue;
+        padding: 0 50px;
+        background-image: url(img/5469461.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .contenido-banner{
+        font-size: 50px;
+        font-weight: 100px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*REDES*/
+    #redes {
+        display: flex;
+        padding: 0 50px;
+        justify-content: space-between;
+        text-decoration: none;
+        font-size: 20px;
+        height: 12vh;
+        align-items: center;
+        flex-direction: column;
+    }
+    .instagram a {
+        text-decoration: none;
+    }
+    .facebook a {
+        text-decoration: none;
+    }
+    .tiktok a {
+        text-decoration: none;
+    }
+    #redes img{
+        padding: 20px 0px;
+    }
+    img:hover{
+        height: 35px;
+    }
+}
